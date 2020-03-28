@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="search.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <title>NoCalorie.com</title>
+</head>
+<body style="margin: 0px;">
+    <div class="common-header">
+        <div class="header-contents">
+            NoCalorie.com
+        </div>
+    </div>
+    <main>
+        <form method="get" name="registForm">
+            <div class="contents">
+                <span class="instruction">独自に開発されたAIが料理の画像からカロリーを算出します。</span>
+                
+                <div class="search-conditions other">
+                    <span class="search-tittle">写真のアップロード <span class="required" style="color:red;">（必須）</span></span>
+                    <hr>
+                    <span>（形式は.png、.jpg）</span><br>
+                    <div id="picture-error" style="color: red;"></div>
+                   
+                    <div class="pic-btn">
+                        <div class="pic-label">
+                            <label class="pic-button">
+                                写真を選択
+                                <input type="file" name="pic1" value="">
+                            </label>
+                        </div>
+                        <div class="pic-show one">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="submit-btn">
+                    <input type="button" value="カロリーを算出する" id="js-show-popup" class="search-button" name = "tag-btn" onclick="validation()">
+                </div>
+            </div>
+        </form>
+    </main>
+    <div class="js-modal-open" style="display: none;"> </div>
+    <div class="modal js-modal">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="modal__content">
+            <p>この画像はサラダです。カロリーは０です。</p>
+            <a class="js-modal-close" id="close" href="">閉じる</a>
+        </div><!--modal__inner-->
+    </div><!--modal-->
+</body>
+</html>
