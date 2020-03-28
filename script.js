@@ -1,4 +1,4 @@
-$(function(){
+window.addEventListener('DOMContentLoaded', function(){
     $('input[type=file]').on('change',function(){
     var me=$(this).parent().parent().next();
     var file = $(this).prop('files')[0];
